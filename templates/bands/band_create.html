@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block background_image %}
+<body background='https://yourope.org/wp-content/uploads/2017/03/Metal-Days-1.jpg' style='background-color: aquamarine;'>
+{% endblock background_image %}
+
+
+
+{% block content %}
+
+  <h1 style='color:chartreuse; text-shadow: black 0px 0px 10px;'>Create a Band!</h1>
+
+  <form action="" method="post" style='color:rgb(255, 145, 0); text-shadow: chartreuse 0px 0px 10px;'>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value='SAVE'>
+  </form>
+
+{% endblock content %}

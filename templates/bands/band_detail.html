@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block background_image %}
+<body background='http://express-images.franklymedia.com/6616/sites/395/2019/02/11093117/Slipknot_Rock_am_Ring_2009_-_21.jpg' style='background-color: aquamarine;'>
+{% endblock background_image %}
+
+{% block content %}
+<h1 style='color:rgb(65, 255, 176); text-shadow: rgb(0, 0, 0) 0px 0px 10px;'>{{band.name}}</h1>
+<p style='color:rgb(65, 255, 176); text-shadow: rgb(0, 0, 0) 0px 0px 10px;'>Members: {{band.members}}</p>
+<p style='color:rgb(65, 255, 176); text-shadow: rgb(0, 0, 0) 0px 0px 10px;'>Genre: {{band.genre}}</p>
+<p style='color:rgb(65, 255, 176); text-shadow: rgb(0, 0, 0) 0px 0px 10px;'>Are They Good? {{band.rating}} out of 10</p>
+<a href="../"><p style='color:rgb(65, 255, 176); text-shadow: rgb(0, 0, 0) 0px 0px 10px;'>Back To Band List</p></a>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+
+{% block background_image %}
+<body background='https://dbdzm869oupei.cloudfront.net/img/sticker/preview/13474.png' style='background-color: aquamarine;'>
+{% endblock background_image %}
+
+
+{% block content %}
+<h1 style='color: rgb(255, 0, 179); text-shadow: black 0px 0px 5px;'>Check out These Bands!</h1>
+{% for band in object_list %}
+  <a style='color:chartreuse; text-shadow: black 0px 0px 10px;' href="{% url 'band_detail' band.pk %}"><h2>{{ band.name}}</h2></a>
+  <a style='color:cyan; text-shadow: black 0px 0px 10px;' href="{% url 'band_delete' band.pk %}">Delete</a>
+  <a style='color:yellow; text-shadow: black 0px 0px 10px;' href="{% url 'band_update' band.pk %}">Update</a>
+{% endfor %}
+<a style='color:rgb(255, 0, 34); text-shadow: black 0px 0px 10px;' href="{% url 'band_create' %}"><h3>Create a New Band!</h3></a>
+{% endblock content %}
